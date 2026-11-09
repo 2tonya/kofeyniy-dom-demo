@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кофейный Дом — гастро-кофейня в Набережных Челнах</title>
+  <meta name="description" content="Кофейный Дом — гастро-кофейня в Набережных Челнах. Кофе, завтраки, десерты и блюда на каждый день. Два филиала, контакты и концепт мобильного приложения.">
+  <meta name="theme-color" content="#F6F1E8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F6F1E8; --paper:#FFFCF7; --ink:#241A14; --muted:#5E5248; --soft:#8D8176;
+      --line:#E4D8C9; --coffee:#5A3524; --coffee2:#442619; --sage:#6E7A58; --butter:#E8C98A;
+      --wash:#F1EAE0; --max:1180px; --r:18px; --shadow:0 18px 42px rgba(36,26,20,.07);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:
+      radial-gradient(900px 420px at 8% -5%, rgba(232,201,138,.22), transparent 60%),
+      linear-gradient(180deg,#FFF9F1 0%,var(--bg) 100%);
+      font:400 16px/1.65 "Commissioner",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    h1,h2,h3{margin:0}
+    h1{font:700 clamp(40px,5.4vw,72px)/0.98 "Fraunces",Georgia,serif;font-optical-sizing:auto;letter-spacing:-.02em}
+    h2{font:700 clamp(29px,3.3vw,44px)/1.04 "Fraunces",Georgia,serif;font-optical-sizing:auto;letter-spacing:-.01em}
+    h3{font:800 19px/1.2 "Commissioner",sans-serif}
+    p{margin:0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:14px;
+      border:1px solid var(--coffee);background:var(--coffee);color:#fff;text-decoration:none;
+      font:800 14px/1 "Commissioner",sans-serif;transition:.18s background,.18s transform,.18s border-color;cursor:pointer}
+    .btn:hover{background:var(--coffee2);border-color:var(--coffee2);transform:translateY(-1px)}
+    .btn.ghost{background:rgba(255,252,247,.7);color:var(--ink);border-color:var(--line)}
+    .btn.ghost:hover{background:#fff}
+    .nav{position:sticky;top:0;z-index:30;background:rgba(255,249,241,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav .inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:76px}
+    .brand{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+    .brand b{font:700 28px/1 "Fraunces",Georgia,serif;font-optical-sizing:auto}
+    .brand span{color:var(--soft);font:700 11px/1 "Commissioner",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-top:5px}
+    .menu{display:flex;gap:18px;flex-wrap:wrap}
+    .menu a{color:var(--muted);text-decoration:none;font:700 13px/1 "Commissioner",sans-serif}
+    .menu a:hover{color:var(--ink)}
+    .hero{padding:46px 0 28px}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:26px;align-items:center}
+    .tag{display:inline-flex;padding:8px 12px;border-radius:999px;background:#F3ECE1;border:1px solid #E6D9C8;color:var(--coffee);font:800 12px/1 "Commissioner",sans-serif;margin-bottom:16px}
+    .lead{margin-top:16px;max-width:58ch;color:var(--muted);font-size:18px;line-height:1.65}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .fact{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,252,247,.72);font:700 13px/1 "Commissioner",sans-serif;color:var(--muted)}
+    .app-wrap{display:flex;justify-content:center;align-items:center;position:relative;min-height:560px}
+    .app-wrap::before{content:"";position:absolute;inset:8% 14%;border-radius:50%;background:radial-gradient(circle,rgba(90,53,36,.12),rgba(90,53,36,0));filter:blur(2px)}
+    .phone{position:relative;width:min(320px,100%);aspect-ratio:9/19.5;background:#1B1511;border-radius:42px;padding:10px;box-shadow:0 30px 60px rgba(36,26,20,.18), inset 0 0 0 1px rgba(255,255,255,.07)}
+    .phone::before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34%;height:22px;background:#1B1511;border-radius:0 0 16px 16px;z-index:3}
+    .screen{height:100%;border-radius:32px;overflow:hidden;background:linear-gradient(180deg,#FFF9F2 0%,#F4EDE3 100%);position:relative}
+    .app-top{padding:34px 16px 14px;background:linear-gradient(180deg,#fff,#FFF9F2);border-bottom:1px solid #E9DED1}
+    .app-brand{font:700 25px/1 "Fraunces",serif;font-optical-sizing:auto}
+    .app-sub{color:var(--soft);font:700 10px/1 "Commissioner",sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+    .app-search{margin-top:12px;padding:10px 12px;border-radius:12px;background:#fff;border:1px solid #E9DED1;color:#9A8F84;font:600 12px/1 "Commissioner",sans-serif}
+    .app-body{padding:12px 12px 14px;display:grid;gap:10px}
+    .app-card{background:#fff;border:1px solid #EBE1D5;border-radius:14px;padding:12px}
+    .app-card b{display:block;font:800 13px/1.2 "Commissioner",sans-serif}
+    .app-card span{display:block;color:var(--muted);font:600 11px/1.35 "Commissioner",sans-serif;margin-top:3px}
+    .app-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .app-mini{background:#F3F1E8;border:1px solid #DFE1D4;border-radius:12px;padding:10px}
+    .app-mini b{display:block;color:var(--sage);font:800 12px/1.2 "Commissioner",sans-serif}
+    .app-mini span{display:block;color:#677055;font:600 10px/1.3 "Commissioner",sans-serif;margin-top:2px}
+    .app-nav{position:absolute;left:10px;right:10px;bottom:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px;border-radius:18px;background:rgba(255,252,247,.94);border:1px solid #E9DED1;backdrop-filter:blur(6px)}
+    .app-nav span{padding:8px 4px;border-radius:12px;text-align:center;font:800 10px/1 "Commissioner",sans-serif;color:var(--soft)}
+    .app-nav span.on{background:var(--coffee);color:#fff}
+    .mock-label{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);white-space:nowrap;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--muted);font:700 12px/1 "Commissioner",sans-serif;box-shadow:var(--shadow)}
+    section{padding:68px 0}
+    .alt{background:rgba(255,252,247,.55);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+    .head p{max-width:62ch;color:var(--muted)}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+    .card p{color:var(--muted);font-size:15px;margin-top:8px}
+    .ico{width:44px;height:44px;border-radius:14px;background:var(--wash);color:var(--coffee);display:grid;place-items:center;font:700 18px/1 "Fraunces",serif;margin-bottom:12px}
+    .dish{box-shadow:none}
+    .dish b{display:inline-block;margin-top:12px;color:var(--coffee);font:800 13px/1 "Commissioner",sans-serif}
+    .app-feat{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+    .steps{display:grid;gap:12px}
+    .step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .n{width:36px;height:36px;border-radius:12px;background:var(--coffee);color:#fff;display:grid;place-items:center;font:800 14px/1 "Commissioner",sans-serif}
+    .visit{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .branch{box-shadow:none}
+    .branch .k{font:800 11px/1 "Commissioner",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-bottom:8px}
+    .branch p{color:var(--muted);font-size:15px;margin-top:6px}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .pill{display:inline-flex;padding:10px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font:700 13px/1 "Commissioner",sans-serif;color:var(--muted);background:#fff}
+    .pill:hover{color:var(--ink);border-color:#D8CABA}
+    .cta{background:linear-gradient(135deg,var(--coffee),#7A4A33);color:#fff;border-radius:24px;padding:28px;display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:18px}
+    .cta h2{color:#fff}
+    .cta p{color:rgba(255,255,255,.84);margin-top:6px}
+    .cta .btn{background:#fff;color:var(--coffee);border-color:#fff}
+    .note{margin-top:14px;color:var(--soft);font-size:13px;line-height:1.55}
+    footer{padding:30px 0 42px;color:var(--soft);font-size:13px;border-top:1px solid var(--line)}
+    .foot{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+    .demo{margin-top:12px;color:var(--coffee);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+    @media (max-width:980px){.hero-grid,.app-feat,.grid4,.grid3,.visit,.foot{grid-template-columns:1fr 1fr}.menu{display:none}.head,.cta{flex-direction:column;align-items:flex-start}.app-wrap{min-height:520px}}
+    @media (max-width:700px){.hero-grid,.app-feat,.grid4,.grid3,.visit,.foot{grid-template-columns:1fr}.app-wrap{min-height:500px;padding-bottom:18px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap inner">
+      <a class="brand" href="#top"><b>Кофейный Дом</b><span>Gastro Coffee</span></a>
+      <div class="menu">
+        <a href="#about">О кофейне</a>
+        <a href="#menu">Меню</a>
+        <a href="#app">Приложение</a>
+        <a href="#visit">Филиалы</a>
+      </div>
+      <a class="btn" href="#visit">Контакты</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="tag">Набережные Челны · 2 филиала</div>
+          <h1>Кофе, завтраки и уютная кухня на каждый день</h1>
+          <p class="lead">Кофейный Дом — гастро-кофейня в Набережных Челнах. Здесь удобно зайти за кофе, позавтракать, выбрать десерт или поесть спокойно в течение дня. Актуальный график, меню и контакты уточняйте в карточках 2ГИС.</p>
+          <div class="actions">
+            <a class="btn" href="#visit">Выбрать филиал</a>
+            <a class="btn ghost" href="#menu">Что в меню</a>
+          </div>
+          <div class="facts">
+            <span class="fact">4,9 · 194 оценки (Чулман)</span>
+            <span class="fact">Лучшая кофейня 2026 (2ГИС)</span>
+            <span class="fact">Завтраки и десерты</span>
+            <span class="fact">Оплата картой / QR / переводом</span>
+          </div>
+        </div>
+        <div class="app-wrap" aria-hidden="true">
+          <div class="phone">
+            <div class="screen">
+              <div class="app-top">
+                <div class="app-brand">Кофейный Дом</div>
+                <div class="app-sub">Mobile App Mockup</div>
+                <div class="app-search">Кофе, завтрак, десерт или столик</div>
+              </div>
+              <div class="app-body">
+                <div class="app-card"><b>Заказ заранее</b><span>Выберите напиток, десерт или блюдо и заберите в удобном филиале.</span></div>
+                <div class="app-row">
+                  <div class="app-mini"><b>Меню</b><span>Кофе, завтраки, выпечка</span></div>
+                  <div class="app-mini"><b>Бонусы</b><span>Профиль и акции гостя</span></div>
+                </div>
+                <div class="app-card"><b>Завтраки весь день</b><span>Быстрый выбор любимых позиций и повтор заказа.</span></div>
+                <div class="app-card"><b>Филиалы</b><span>Адреса, график, маршрут и контакты.</span></div>
+              </div>
+              <div class="app-nav">
+                <span class="on">Главная</span><span>Меню</span><span>Заказ</span><span>Профиль</span>
+              </div>
+            </div>
+          </div>
+          <div class="mock-label">Макет мобильного приложения (концепт)</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="alt">
+      <div class="wrap">
+        <div class="head">
+          <div><h2>О кофейне</h2></div>
+          <p>Гастро-кофейня, где кофе сочетается с кухней и десертами: место для завтрака, короткой встречи, работы за чашкой кофе или спокойного обеда.</p>
+        </div>
+        <div class="grid4">
+          <article class="card"><div class="ico">К</div><h3>Кофе</h3><p>Эспрессо, капучино, американо, фильтр и другие напитки — выбор уточняйте в меню филиала.</p></article>
+          <article class="card"><div class="ico">З</div><h3>Завтраки и кухня</h3><p>По отзывам гостей — завтраки, вафли, основные блюда и варианты на разный вкус.</p></article>
+          <article class="card"><div class="ico">Д</div><h3>Десерты</h3><p>Витрина с десертами и выпечкой; ассортимент может меняться в течение дня.</p></article>
+          <article class="card"><div class="ico">У</div><h3>Атмосфера</h3><p>Уютный интерьер, дружелюбное обслуживание и удобный формат для повседневных визитов.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="wrap">
+        <div class="head">
+          <div><h2>Направления меню</h2></div>
+          <p>Примеры направлений по открытым данным и отзывам. Состав, цены, сезонные позиции и наличие уточняйте в кофейне.</p>
+        </div>
+        <div class="grid3">
+          <article class="card dish"><h3>Кофе и напитки</h3><p>Классический кофе, молочные напитки, фильтр, какао, чай, смузи и другие позиции.</p><b>Актуальное меню — в 2ГИС</b></article>
+          <article class="card dish"><h3>Завтраки и вафли</h3><p>Завтраки, вафли, сырники/каши и сытные варианты — удобный формат на утро и день.</p><b>Уточняйте наличие и подачу</b></article>
+          <article class="card dish"><h3>Десерты и кухня</h3><p>Десерты, выпечка, салаты и горячие блюда; ассортимент зависит от филиала и дня.</p><b>Состав и цена — по месту</b></article>
+        </div>
+        <p class="note">Информация носит ознакомительный характер: меню, цены, график и условия оплаты могут меняться. Проверяйте актуальные данные в официальных каналах и карточках 2ГИС.</p>
+      </div>
+    </section>
+
+    <section id="app" class="alt">
+      <div class="wrap">
+        <div class="head">
+          <div><h2>Макет мобильного приложения</h2></div>
+          <p>Помимо сайта, для Кофейного Дома можно разработать мобильное приложение: меню, предзаказ, программа лояльности, уведомления и удобный выбор филиала.</p>
+        </div>
+        <div class="app-feat">
+          <div class="card" style="box-shadow:none">
+            <h3>Что может быть в приложении</h3>
+            <div class="grid3" style="margin-top:14px">
+              <div class="card" style="box-shadow:none;padding:16px"><h3 style="font-size:16px">Меню</h3><p>Категории, фото, состав, актуальные позиции и цены.</p></div>
+              <div class="card" style="box-shadow:none;padding:16px"><h3 style="font-size:16px">Предзаказ</h3><p>Заказ кофе, завтрака или десерта к удобному времени.</p></div>
+              <div class="card" style="box-shadow:none;padding:16px"><h3 style="font-size:16px">Лояльность</h3><p>Бонусы, акции, история заказов и push-уведомления.</p></div>
+            </div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="n">1</div><div><h3>Концепт и сценарии</h3><p>Определяем, что важнее гостю: меню, предзаказ, бронь, филиалы или бонусы.</p></div></div>
+            <div class="step"><div class="n">2</div><div><h3>Дизайн экранов</h3><p>Готовим понятный интерфейс в стиле кофейни и макеты ключевых экранов.</p></div></div>
+            <div class="step"><div class="n">3</div><div><h3>Разработка</h3><p>Собираем приложение и при необходимости подключаем меню, оплату, CRM или уведомления.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="wrap">
+        <div class="head">
+          <div><h2>Филиалы и контакты</h2></div>
+          <p>У Кофейного Дома два филиала в Набережных Челнах. Для точного графика, меню и связи используйте карточки 2ГИС выбранной точки.</p>
+        </div>
+        <div class="visit">
+          <article class="card branch">
+            <div class="k">Новый Город · Центральный район</div>
+            <h3>Проспект Чулман, 81а</h3>
+            <p>Набережные Челны, Республика Татарстан, 423832, 1 этаж. Оценка 4,9 (194), отметка 2ГИС «Лучшая кофейня 2026».</p>
+            <div class="links">
+              <a class="pill" href="https://2gis.ru/nabchelny/firm/70000001102839712" target="_blank" rel="noopener">Карточка в 2ГИС</a>
+              <a class="pill" href="https://2gis.ru/nabchelny/firm/70000001102839712/tab/menu" target="_blank" rel="noopener">Меню в 2ГИС</a>
+            </div>
+          </article>
+          <article class="card branch">
+            <div class="k">Омега · Гурмэхолл</div>
+            <h3>Проспект Сююмбике, 2/19</h3>
+            <p>Набережные Челны, Омега, 2 этаж, фудхолл Гурмэхолл, 423812. Телефон и мессенджеры — в карточке филиала.</p>
+            <div class="links">
+              <a class="pill" href="https://2gis.ru/nabchelny/firm/70000001115146138" target="_blank" rel="noopener">Карточка в 2ГИС</a>
+              <a class="pill" href="https://wa.me/79600409197" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="pill" href="https://t.me/coffeehouse_nch" target="_blank" rel="noopener">Telegram</a>
+            </div>
+          </article>
+        </div>
+        <p class="note">Перед визитом проверьте актуальный график работы, наличие посадочных мест и меню в выбранном филиале.</p>
+        <div class="cta">
+          <div>
+            <h2>Нужны сайт и мобильное приложение для кофейни?</h2>
+            <p>Можно собрать сайт-обёртку, добавить меню, филиалы и контакты, а также разработать макет и приложение для гостей.</p>
+          </div>
+          <a class="btn" href="#visit">Посмотреть контакты</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <div><b style="color:var(--ink)">Кофейный Дом</b> — гастро-кофейня в Набережных Челнах.</div>
+        <div class="demo">Демо-версия макета сайта и концепт мобильного приложения</div>
+      </div>
+      <div>Информация основана на открытых данных 2ГИС и носит ознакомительный характер. Меню, цены, график и контакты уточняйте в кофейне.</div>
+    </div>
+  </footer>
+</body>
+</html>
